@@ -17,14 +17,14 @@
     echo 'Bem vindo ao curso de PHP';
   };
 
-  exibirBoasVindas();
+  exibirBoasVindas()
 
 
   //Tipo com retorno
-  function calcularAreaTerreno($largura, $comprimento) {
-      $area = $largura * $comprimento;
-      return $area;
-  }
+
+  function calcularAreaTerreno($largura, $comprimento){
+    return $largura * $comprimento;
+  };
 
   calcularAreaTerreno(30,50);
 

@@ -32,7 +32,11 @@
 
   //str_replace(procura por, subistitui por,var) = substitui uma cadeia de caractere por outra
   echo $text;
-  echo str_replace('PHP','JavaScript',$text);
+  echo str_replace('PHP', 'JavaScript', $text);
+
+  //substr(var,posicao inicial, qtde caracteres) = retorna parte de uma string
+  echo $text;
+  echo substr($text, 1 , 4);
   ?>
 </body>
 
