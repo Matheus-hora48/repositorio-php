@@ -26,7 +26,7 @@
 
   /*
   //array_keys() -> pega todas as chaves da array e faça outra array com ela
-  $array = [1 => 'a', 7 => 'b', 18 => 'c'];
+  $array = 'a'[1 => , 7 => 'b', 18 => 'c'];
   echo '<pre>';
   print_r($array);
   echo '</pre>';
