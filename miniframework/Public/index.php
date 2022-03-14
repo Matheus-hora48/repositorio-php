@@ -4,7 +4,8 @@
 
 	$route = new \App\Route;
 	echo 'Isso está funcionando';
-
-	$route->getUrl()
-
+	echo '<hr>';
+	print_r ($route->getUrl());
+	echo '<hr>';
+	print_r ($route->getRoutes());
 ?>
