@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Models;
+
 use MF\Model\Model;
 
-class Produto extends Model{
-
-	protected $db;
+class Produto extends Model {
 
 	public function getProdutos() {
 		
