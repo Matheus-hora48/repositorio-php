@@ -2,16 +2,19 @@
 
 namespace App\Controllers;
 
-class IndexController {
+use MF\Controller\action;
+
+class IndexController extends action{
+
 
 	public function index() {
 		$dados = array('Sofa', 'Cadeira', 'Armario');
-		require_once "../App/Views/index/index.phtml";
+		$this->render('index', $dados);
 	}
 
 	public function sobreNos() {
 		$dados = array('Celular', 'Computador', 'Xbox');
-		require_once "../App/Views/index/sobreNos.phtml";
+		$this->render('sobreNos', $dados);
 	}
 
 	
