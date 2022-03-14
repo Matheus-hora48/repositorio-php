@@ -8,6 +8,7 @@ class Route{
   
   public function __construct(){
     $this->initRoutes();
+    $this->run($this->getUrl());
   }
 
   public function getRoutes(){
@@ -34,6 +35,19 @@ class Route{
 
     $this->setRoutes($routes);
 
+  }
+
+  public function run($url){
+    foreach ($this->getRoutes() as $key => $route){
+      if($url == $route['route']){
+        $class = "App\\Controllers\\" . ucfrist($route['controller']);
+
+        $controller = new $class;
+        $action = $route['action'];
+        $controller->action;
+
+      }
+    }
   }
 
   public function getUrl(){
