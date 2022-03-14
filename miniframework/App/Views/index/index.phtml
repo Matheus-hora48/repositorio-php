@@ -5,7 +5,11 @@
 
 echo 'Chegamos ao IndexController e disparamentos a action index' . '<br><br>';
 
-foreach($dados as $indece => $valor){
-  echo $valor . '<br>';
+echo '<pre>';
+echo $this->view->$dados;
+echo '</pre>';
+
+foreach($this->view->dados as $indece => $valor){
+  //echo $valor . '<br>';
 }
 ?>
