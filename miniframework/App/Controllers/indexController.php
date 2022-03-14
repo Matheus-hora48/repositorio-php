@@ -13,6 +13,8 @@ class IndexController {
 		$dados = array('Celular', 'Computador', 'Xbox');
 		require_once "../App/Views/index/sobreNos.phtml";
 	}
+
+	
 }
 
 
