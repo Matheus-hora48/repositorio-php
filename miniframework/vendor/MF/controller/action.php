@@ -2,36 +2,33 @@
 
 namespace MF\Controller;
 
-abstract class action
-{
+abstract class Action {
 
-  protected $view;
+	protected $view;
 
-  public function __construct()
-  {
-    $this->view = new \stdClass();
-  }
+	public function __construct() {
+		$this->view = new \stdClass();
+	}
 
-  protected function render($view, $layout)
-  {
-    $this->view->page =$view;
+	protected function render($view, $layout) {
+		$this->view->page = $view;
 
-    if(file_exists("../App/Views/".$layout.".phtml")){
-      require_once "../App/Views/".$layout.".phtml";
-    } else{
-      $this->content();
-    }
-    
-  }
+		if(file_exists("../App/Views/".$layout.".phtml")) {
+			require_once "../App/Views/".$layout.".phtml";
+		} else {
+			$this->content();
+		}
+	}
 
-  protected function content()
-  {
-    $classeAtual = get_class($this);
+	protected function content() {
+		$classAtual = get_class($this);
 
-    $classeAtual = str_replace('App\\Controllers\\', '', $classeAtual);
+		$classAtual = str_replace('App\\Controllers\\', '', $classAtual);
 
-    $classeAtual = str_replace('Controller', '', $classeAtual);
+		$classAtual = strtolower(str_replace('Controller', '', $classAtual));
 
-    require_once "../App/Views/" . $classeAtual . "/" . $this->view->page . ".phtml";
-  }
+		require_once "../App/Views/".$classAtual."/".$this->view->page.".phtml";
+	}
 }
+
+?>
